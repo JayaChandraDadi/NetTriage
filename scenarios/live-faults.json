@@ -1,0 +1,16 @@
+{
+  "faults": [
+    {"name": "isp-brownout-us-west", "type": "brownout", "startSec": 120, "durationSec": 120,
+     "match": {"color": "biz-internet", "region": "us-west"}, "lossPct": 4, "addLatencyMs": 70, "addJitterMs": 20},
+    {"name": "site-102-lte-blackout", "type": "blackout", "startSec": 180, "durationSec": 120,
+     "match": {"siteId": 102, "color": "lte"}},
+    {"name": "lte-jitter-us-east", "type": "jitter-storm", "startSec": 330, "durationSec": 120,
+     "match": {"color": "lte", "region": "us-east"}, "lossPct": 0, "addLatencyMs": 0, "addJitterMs": 40},
+    {"name": "hub-east-degradation", "type": "brownout", "startSec": 480, "durationSec": 120,
+     "match": {"hub": "10.0.0.2"}, "lossPct": 3, "addLatencyMs": 50, "addJitterMs": 10},
+    {"name": "site-117-down", "type": "blackout", "startSec": 630, "durationSec": 120,
+     "match": {"siteId": 117}},
+    {"name": "mpls-brownout-eu-west", "type": "brownout", "startSec": 780, "durationSec": 120,
+     "match": {"color": "mpls", "region": "eu-west"}, "lossPct": 2.5, "addLatencyMs": 40, "addJitterMs": 5}
+  ]
+}

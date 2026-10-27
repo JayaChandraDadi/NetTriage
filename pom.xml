@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>4.1.2</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>io.nettriage</groupId>
+  <artifactId>nettriage</artifactId>
+  <version>0.1.0</version>
+  <packaging>pom</packaging>
+  <name>NetTriage</name>
+  <description>Root-cause diagnosis for SD-WAN overlay degradations, with an MCP interface for AI agents</description>
+
+  <modules>
+    <module>triage-core</module>
+    <module>bench</module>
+    <module>agent</module>
+    <module>service</module>
+  </modules>
+
+  <properties>
+    <java.version>21</java.version>
+    <mcp.version>2.1.0</mcp.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.modelcontextprotocol.sdk</groupId>
+        <artifactId>mcp-core</artifactId>
+        <version>${mcp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.modelcontextprotocol.sdk</groupId>
+        <artifactId>mcp-json-jackson3</artifactId>
+        <version>${mcp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.modelcontextprotocol.sdk</groupId>
+        <artifactId>mcp</artifactId>
+        <version>${mcp.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

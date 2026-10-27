@@ -1,0 +1,401 @@
+{
+  "config" : {
+    "perType" : 40,
+    "tunnels" : 800,
+    "seed" : 5001,
+    "windowSeconds" : 10,
+    "sites" : 200,
+    "cpus" : 2,
+    "evalSecondsAfterFaultStart" : 90
+  },
+  "results" : [ {
+    "type" : "provider-brownout",
+    "runs" : 40,
+    "note" : "loss +4.9%, latency +56 ms, jitter +23 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 67.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 19.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 46.5,
+    "falseIncidents" : 1,
+    "runsWithFalseIncident" : 1,
+    "tunnelAlerts" : 14143,
+    "incidentsOpened" : 41,
+    "alertsPerIncident" : 344.95,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "subtle-brownout",
+    "runs" : 40,
+    "note" : "loss +1.2%, latency +14 ms, jitter +3 ms",
+    "nettriageExactPct" : 60.0,
+    "thresholdCoverExactPct" : 15.0,
+    "thresholdCover50ExactPct" : 17.5,
+    "alarmsOnlyExactPct" : 40.0,
+    "blameLatestChangeExactPct" : 15.0,
+    "timeToDiagnoseP50s" : 21.5,
+    "timeToDiagnoseP90s" : 38.5,
+    "faultsNeverDiagnosed" : 9,
+    "resolvedAfterFaultEndP50s" : 44.5,
+    "falseIncidents" : 1,
+    "runsWithFalseIncident" : 1,
+    "tunnelAlerts" : 17417,
+    "incidentsOpened" : 32,
+    "alertsPerIncident" : 544.28,
+    "confidenceWhenRight" : {
+      "HIGH" : 10,
+      "LOW" : 10,
+      "MEDIUM" : 4
+    }
+  }, {
+    "type" : "noisy-brownout",
+    "runs" : 40,
+    "note" : "loss +4.3%, latency +87 ms, jitter +9 ms, ten times the background blips",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 97.5,
+    "thresholdCover50ExactPct" : 85.0,
+    "alarmsOnlyExactPct" : 0.0,
+    "blameLatestChangeExactPct" : 97.5,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 19.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 50.5,
+    "falseIncidents" : 3,
+    "runsWithFalseIncident" : 3,
+    "tunnelAlerts" : 22079,
+    "incidentsOpened" : 44,
+    "alertsPerIncident" : 501.8,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "jitter-storm",
+    "runs" : 40,
+    "note" : "loss +0.0%, latency +7 ms, jitter +46 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 92.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 20.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 44.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 11195,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 279.88,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "carrier-outage",
+    "runs" : 40,
+    "note" : "loss +4.3%, latency +65 ms, jitter +10 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 92.5,
+    "alarmsOnlyExactPct" : 90.0,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 16.5,
+    "timeToDiagnoseP90s" : 19.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 46.5,
+    "falseIncidents" : 1,
+    "runsWithFalseIncident" : 1,
+    "tunnelAlerts" : 31422,
+    "incidentsOpened" : 41,
+    "alertsPerIncident" : 766.39,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "circuit-blackout",
+    "runs" : 40,
+    "note" : "all probes lost",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 47.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 26.5,
+    "timeToDiagnoseP90s" : 29.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 44.5,
+    "falseIncidents" : 2,
+    "runsWithFalseIncident" : 2,
+    "tunnelAlerts" : 5283,
+    "incidentsOpened" : 42,
+    "alertsPerIncident" : 125.79,
+    "confidenceWhenRight" : {
+      "LOW" : 40
+    }
+  }, {
+    "type" : "circuit-brownout",
+    "runs" : 40,
+    "note" : "loss +19.5%, latency +42 ms, jitter +9 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 57.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 28.5,
+    "timeToDiagnoseP90s" : 31.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 42.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 5332,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 133.3,
+    "confidenceWhenRight" : {
+      "LOW" : 40
+    }
+  }, {
+    "type" : "site-down",
+    "runs" : 40,
+    "note" : "all probes lost on every transport",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 80.0,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 18.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 44.5,
+    "falseIncidents" : 2,
+    "runsWithFalseIncident" : 2,
+    "tunnelAlerts" : 5363,
+    "incidentsOpened" : 42,
+    "alertsPerIncident" : 127.69,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "hub-degradation",
+    "runs" : 40,
+    "note" : "loss +3.2%, latency +65 ms, jitter +6 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 95.0,
+    "alarmsOnlyExactPct" : 92.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 16.5,
+    "timeToDiagnoseP90s" : 19.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 47.5,
+    "falseIncidents" : 1,
+    "runsWithFalseIncident" : 1,
+    "tunnelAlerts" : 57009,
+    "incidentsOpened" : 41,
+    "alertsPerIncident" : 1390.46,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "hub-circuit",
+    "runs" : 40,
+    "note" : "loss +5.8%, latency +44 ms, jitter +12 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 97.5,
+    "thresholdCover50ExactPct" : 85.0,
+    "alarmsOnlyExactPct" : 60.0,
+    "blameLatestChangeExactPct" : 97.5,
+    "timeToDiagnoseP50s" : 14.5,
+    "timeToDiagnoseP90s" : 19.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 46.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 19925,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 498.13,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "bad-rollout",
+    "runs" : 40,
+    "note" : "QoS change, loss +0.0%, latency +3 ms, jitter +40 ms, canary of 10 routers",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 92.5,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 62.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 24.5,
+    "timeToDiagnoseP90s" : 29.5,
+    "faultsNeverDiagnosed" : 0,
+    "falseIncidents" : 2,
+    "runsWithFalseIncident" : 2,
+    "tunnelAlerts" : 7158,
+    "incidentsOpened" : 42,
+    "alertsPerIncident" : 170.43,
+    "confidenceWhenRight" : {
+      "HIGH" : 38,
+      "MEDIUM" : 2
+    }
+  }, {
+    "type" : "red-herring-rollout",
+    "runs" : 40,
+    "note" : "harmless fleet-wide rollout on biz-internet shortly before a eu-west brownout, loss +4.0%, latency +83 ms, jitter +8 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 77.5,
+    "blameLatestChangeExactPct" : 0.0,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 20.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 46.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 15581,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 389.53,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "compound",
+    "runs" : 40,
+    "note" : "provider brownout plus an unrelated outage in another region",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 97.5,
+    "thresholdCover50ExactPct" : 97.5,
+    "alarmsOnlyExactPct" : 40.0,
+    "blameLatestChangeExactPct" : 97.5,
+    "timeToDiagnoseP50s" : 16.5,
+    "timeToDiagnoseP90s" : 25.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 45.5,
+    "falseIncidents" : 1,
+    "runsWithFalseIncident" : 1,
+    "tunnelAlerts" : 13905,
+    "incidentsOpened" : 81,
+    "alertsPerIncident" : 171.67,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "overlapping-outage",
+    "runs" : 40,
+    "note" : "biz-internet circuit down at a site inside a lte brownout",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 42.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 80.5,
+    "timeToDiagnoseP90s" : 88.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 47.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 15360,
+    "incidentsOpened" : 80,
+    "alertsPerIncident" : 192.0,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "benign-rollout",
+    "runs" : 40,
+    "note" : "staged rollout that changes nothing that matters",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 80.0,
+    "blameLatestChangeExactPct" : 90.0,
+    "faultsNeverDiagnosed" : 0,
+    "falseIncidents" : 2,
+    "runsWithFalseIncident" : 2,
+    "tunnelAlerts" : 5389,
+    "incidentsOpened" : 2,
+    "alertsPerIncident" : 2694.5,
+    "confidenceWhenRight" : { }
+  }, {
+    "type" : "noise-only",
+    "runs" : 40,
+    "note" : "background noise only",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 80.0,
+    "blameLatestChangeExactPct" : 100.0,
+    "faultsNeverDiagnosed" : 0,
+    "falseIncidents" : 1,
+    "runsWithFalseIncident" : 1,
+    "tunnelAlerts" : 5099,
+    "incidentsOpened" : 1,
+    "alertsPerIncident" : 5099.0,
+    "confidenceWhenRight" : { }
+  }, {
+    "type" : "all faults",
+    "runs" : 560,
+    "note" : "loss +4.9%, latency +56 ms, jitter +23 ms",
+    "nettriageExactPct" : 97.1,
+    "thresholdCoverExactPct" : 92.9,
+    "thresholdCover50ExactPct" : 90.9,
+    "alarmsOnlyExactPct" : 60.7,
+    "blameLatestChangeExactPct" : 86.3,
+    "timeToDiagnoseP50s" : 17.5,
+    "timeToDiagnoseP90s" : 29.5,
+    "faultsNeverDiagnosed" : 9,
+    "resolvedAfterFaultEndP50s" : 46.5,
+    "falseIncidents" : 14,
+    "runsWithFalseIncident" : 14,
+    "tunnelAlerts" : 241172,
+    "incidentsOpened" : 646,
+    "alertsPerIncident" : 373.33,
+    "confidenceWhenRight" : {
+      "HIGH" : 448,
+      "LOW" : 90,
+      "MEDIUM" : 6
+    }
+  }, {
+    "type" : "no fault",
+    "runs" : 80,
+    "note" : "staged rollout that changes nothing that matters",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 80.0,
+    "blameLatestChangeExactPct" : 95.0,
+    "faultsNeverDiagnosed" : 0,
+    "falseIncidents" : 3,
+    "runsWithFalseIncident" : 3,
+    "tunnelAlerts" : 10488,
+    "incidentsOpened" : 3,
+    "alertsPerIncident" : 3496.0,
+    "confidenceWhenRight" : { }
+  } ],
+  "runSeconds" : 53,
+  "scale" : [ {
+    "sites" : 200,
+    "tunnels" : 800,
+    "meanWindowMs" : 0.93,
+    "exact" : true
+  }, {
+    "sites" : 1000,
+    "tunnels" : 4000,
+    "meanWindowMs" : 8.16,
+    "exact" : true
+  }, {
+    "sites" : 2500,
+    "tunnels" : 10000,
+    "meanWindowMs" : 45.21,
+    "exact" : true
+  }, {
+    "sites" : 5000,
+    "tunnels" : 20000,
+    "meanWindowMs" : 178.73,
+    "exact" : true
+  } ]
+}

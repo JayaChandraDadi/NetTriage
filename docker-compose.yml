@@ -1,0 +1,15 @@
+# NetTriage next to an existing WanPulse Kafka and EdgeFleet controller.
+# Not exercised in CI: the live runs in scripts/ start everything from jars instead.
+services:
+  nettriage:
+    build: .
+    ports: ["8095:8095"]
+    environment:
+      KAFKA_ENABLED: "true"
+      KAFKA_BOOTSTRAP: ${KAFKA_BOOTSTRAP:-kafka:9092}
+      EDGEFLEET_URL: ${EDGEFLEET_URL:-http://controller:8090}
+      REPLAY_ENABLED: "false"
+  dashboard:
+    build: dashboard
+    ports: ["3002:80"]
+    depends_on: [nettriage]

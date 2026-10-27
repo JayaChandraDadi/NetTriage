@@ -1,0 +1,450 @@
+{
+  "config" : {
+    "seed" : 1,
+    "windowSeconds" : 10,
+    "sites" : 200,
+    "cpus" : 2,
+    "evalSecondsAfterFaultStart" : 90,
+    "perType" : 40,
+    "tunnels" : 800
+  },
+  "results" : [ {
+    "type" : "provider-brownout",
+    "runs" : 40,
+    "note" : "loss +3.2%, latency +32 ms, jitter +20 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 77.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 16.5,
+    "timeToDiagnoseP90s" : 20.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 45.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 13934,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 348.35,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "subtle-brownout",
+    "runs" : 40,
+    "note" : "loss +1.3%, latency +24 ms, jitter +6 ms",
+    "nettriageExactPct" : 52.5,
+    "thresholdCoverExactPct" : 5.0,
+    "thresholdCover50ExactPct" : 5.0,
+    "alarmsOnlyExactPct" : 20.0,
+    "blameLatestChangeExactPct" : 5.0,
+    "timeToDiagnoseP50s" : 20.5,
+    "timeToDiagnoseP90s" : 34.5,
+    "faultsNeverDiagnosed" : 12,
+    "resolvedAfterFaultEndP50s" : 38.5,
+    "falseIncidents" : 3,
+    "runsWithFalseIncident" : 3,
+    "tunnelAlerts" : 17374,
+    "incidentsOpened" : 31,
+    "alertsPerIncident" : 560.45,
+    "confidenceWhenRight" : {
+      "HIGH" : 6,
+      "LOW" : 12,
+      "MEDIUM" : 3
+    }
+  }, {
+    "type" : "noisy-brownout",
+    "runs" : 40,
+    "note" : "loss +4.0%, latency +100 ms, jitter +20 ms, ten times the background blips",
+    "nettriageExactPct" : 95.0,
+    "thresholdCoverExactPct" : 92.5,
+    "thresholdCover50ExactPct" : 90.0,
+    "alarmsOnlyExactPct" : 0.0,
+    "blameLatestChangeExactPct" : 92.5,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 20.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 47.5,
+    "falseIncidents" : 36,
+    "runsWithFalseIncident" : 21,
+    "tunnelAlerts" : 19262,
+    "incidentsOpened" : 76,
+    "alertsPerIncident" : 253.45,
+    "confidenceWhenRight" : {
+      "HIGH" : 38
+    }
+  }, {
+    "type" : "jitter-storm",
+    "runs" : 40,
+    "note" : "loss +0.0%, latency +3 ms, jitter +35 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 77.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 16.5,
+    "timeToDiagnoseP90s" : 20.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 45.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 9571,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 239.28,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "carrier-outage",
+    "runs" : 40,
+    "note" : "loss +4.1%, latency +78 ms, jitter +11 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 90.0,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 20.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 47.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 30558,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 763.95,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "circuit-blackout",
+    "runs" : 40,
+    "note" : "all probes lost",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 70.0,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 24.5,
+    "timeToDiagnoseP90s" : 29.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 44.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 5234,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 130.85,
+    "confidenceWhenRight" : {
+      "LOW" : 40
+    }
+  }, {
+    "type" : "circuit-brownout",
+    "runs" : 40,
+    "note" : "loss +9.9%, latency +48 ms, jitter +15 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 55.0,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 26.5,
+    "timeToDiagnoseP90s" : 30.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 43.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 5296,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 132.4,
+    "confidenceWhenRight" : {
+      "LOW" : 40
+    }
+  }, {
+    "type" : "site-down",
+    "runs" : 40,
+    "note" : "all probes lost on every transport",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 75.0,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 16.5,
+    "timeToDiagnoseP90s" : 19.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 44.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 5337,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 133.43,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "hub-degradation",
+    "runs" : 40,
+    "note" : "loss +4.0%, latency +52 ms, jitter +14 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 92.5,
+    "alarmsOnlyExactPct" : 85.0,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 16.5,
+    "timeToDiagnoseP90s" : 19.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 48.5,
+    "falseIncidents" : 2,
+    "runsWithFalseIncident" : 2,
+    "tunnelAlerts" : 55134,
+    "incidentsOpened" : 42,
+    "alertsPerIncident" : 1312.71,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "hub-circuit",
+    "runs" : 40,
+    "note" : "loss +4.4%, latency +38 ms, jitter +11 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 97.5,
+    "thresholdCover50ExactPct" : 85.0,
+    "alarmsOnlyExactPct" : 65.0,
+    "blameLatestChangeExactPct" : 97.5,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 19.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 45.5,
+    "falseIncidents" : 1,
+    "runsWithFalseIncident" : 1,
+    "tunnelAlerts" : 18871,
+    "incidentsOpened" : 41,
+    "alertsPerIncident" : 460.27,
+    "confidenceWhenRight" : {
+      "HIGH" : 39,
+      "MEDIUM" : 1
+    }
+  }, {
+    "type" : "bad-rollout",
+    "runs" : 40,
+    "note" : "MTU change, loss +4.3%, latency +0 ms, jitter +0 ms, canary of 10 routers",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 92.5,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 52.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 23.5,
+    "timeToDiagnoseP90s" : 29.5,
+    "faultsNeverDiagnosed" : 0,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 7744,
+    "incidentsOpened" : 40,
+    "alertsPerIncident" : 193.6,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "red-herring-rollout",
+    "runs" : 40,
+    "note" : "harmless fleet-wide rollout on mpls shortly before a us-east brownout, loss +2.6%, latency +66 ms, jitter +20 ms",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 67.5,
+    "blameLatestChangeExactPct" : 0.0,
+    "timeToDiagnoseP50s" : 15.5,
+    "timeToDiagnoseP90s" : 18.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 46.5,
+    "falseIncidents" : 1,
+    "runsWithFalseIncident" : 1,
+    "tunnelAlerts" : 18614,
+    "incidentsOpened" : 41,
+    "alertsPerIncident" : 454.0,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "compound",
+    "runs" : 40,
+    "note" : "provider brownout plus an unrelated outage in another region",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 27.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "timeToDiagnoseP50s" : 18.5,
+    "timeToDiagnoseP90s" : 25.5,
+    "faultsNeverDiagnosed" : 0,
+    "resolvedAfterFaultEndP50s" : 45.5,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 14385,
+    "incidentsOpened" : 80,
+    "alertsPerIncident" : 179.81,
+    "confidenceWhenRight" : {
+      "HIGH" : 40
+    }
+  }, {
+    "type" : "benign-rollout",
+    "runs" : 40,
+    "note" : "staged rollout that changes nothing that matters",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 77.5,
+    "blameLatestChangeExactPct" : 95.0,
+    "faultsNeverDiagnosed" : 0,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 5302,
+    "incidentsOpened" : 0,
+    "alertsPerIncident" : null,
+    "confidenceWhenRight" : { }
+  }, {
+    "type" : "noise-only",
+    "runs" : 40,
+    "note" : "background noise only",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 77.5,
+    "blameLatestChangeExactPct" : 100.0,
+    "faultsNeverDiagnosed" : 0,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 5235,
+    "incidentsOpened" : 0,
+    "alertsPerIncident" : null,
+    "confidenceWhenRight" : { }
+  }, {
+    "type" : "all faults",
+    "runs" : 520,
+    "note" : "loss +3.2%, latency +32 ms, jitter +20 ms",
+    "nettriageExactPct" : 96.0,
+    "thresholdCoverExactPct" : 91.3,
+    "thresholdCover50ExactPct" : 90.2,
+    "alarmsOnlyExactPct" : 58.7,
+    "blameLatestChangeExactPct" : 84.2,
+    "timeToDiagnoseP50s" : 17.5,
+    "timeToDiagnoseP90s" : 26.5,
+    "faultsNeverDiagnosed" : 12,
+    "resolvedAfterFaultEndP50s" : 45.5,
+    "falseIncidents" : 43,
+    "runsWithFalseIncident" : 28,
+    "tunnelAlerts" : 221314,
+    "incidentsOpened" : 591,
+    "alertsPerIncident" : 374.47,
+    "confidenceWhenRight" : {
+      "HIGH" : 403,
+      "LOW" : 92,
+      "MEDIUM" : 4
+    }
+  }, {
+    "type" : "no fault",
+    "runs" : 80,
+    "note" : "staged rollout that changes nothing that matters",
+    "nettriageExactPct" : 100.0,
+    "thresholdCoverExactPct" : 100.0,
+    "thresholdCover50ExactPct" : 100.0,
+    "alarmsOnlyExactPct" : 77.5,
+    "blameLatestChangeExactPct" : 97.5,
+    "faultsNeverDiagnosed" : 0,
+    "falseIncidents" : 0,
+    "runsWithFalseIncident" : 0,
+    "tunnelAlerts" : 10537,
+    "incidentsOpened" : 0,
+    "alertsPerIncident" : null,
+    "confidenceWhenRight" : { }
+  } ],
+  "runSeconds" : 33,
+  "sensitivity" : [ {
+    "lambda" : 1.0,
+    "eps" : 0.002,
+    "faultExactPct" : 97.3,
+    "falseIncidentsPerRun" : 0.17
+  }, {
+    "lambda" : 1.0,
+    "eps" : 0.005,
+    "faultExactPct" : 96.2,
+    "falseIncidentsPerRun" : 0.16
+  }, {
+    "lambda" : 1.0,
+    "eps" : 0.01,
+    "faultExactPct" : 95.4,
+    "falseIncidentsPerRun" : 0.16
+  }, {
+    "lambda" : 2.0,
+    "eps" : 0.002,
+    "faultExactPct" : 97.7,
+    "falseIncidentsPerRun" : 0.1
+  }, {
+    "lambda" : 2.0,
+    "eps" : 0.005,
+    "faultExactPct" : 96.5,
+    "falseIncidentsPerRun" : 0.09
+  }, {
+    "lambda" : 2.0,
+    "eps" : 0.01,
+    "faultExactPct" : 95.8,
+    "falseIncidentsPerRun" : 0.07
+  }, {
+    "lambda" : 3.0,
+    "eps" : 0.002,
+    "faultExactPct" : 97.7,
+    "falseIncidentsPerRun" : 0.08
+  }, {
+    "lambda" : 3.0,
+    "eps" : 0.005,
+    "faultExactPct" : 96.5,
+    "falseIncidentsPerRun" : 0.06
+  }, {
+    "lambda" : 3.0,
+    "eps" : 0.01,
+    "faultExactPct" : 95.8,
+    "falseIncidentsPerRun" : 0.06
+  }, {
+    "lambda" : 4.0,
+    "eps" : 0.002,
+    "faultExactPct" : 98.1,
+    "falseIncidentsPerRun" : 0.03
+  }, {
+    "lambda" : 4.0,
+    "eps" : 0.005,
+    "faultExactPct" : 96.9,
+    "falseIncidentsPerRun" : 0.01
+  }, {
+    "lambda" : 4.0,
+    "eps" : 0.01,
+    "faultExactPct" : 76.9,
+    "falseIncidentsPerRun" : 0.01
+  }, {
+    "lambda" : 5.0,
+    "eps" : 0.002,
+    "faultExactPct" : 98.5,
+    "falseIncidentsPerRun" : 0.01
+  }, {
+    "lambda" : 5.0,
+    "eps" : 0.005,
+    "faultExactPct" : 77.7,
+    "falseIncidentsPerRun" : 0.01
+  }, {
+    "lambda" : 5.0,
+    "eps" : 0.01,
+    "faultExactPct" : 76.9,
+    "falseIncidentsPerRun" : 0.01
+  }, {
+    "lambda" : 6.0,
+    "eps" : 0.002,
+    "faultExactPct" : 98.5,
+    "falseIncidentsPerRun" : 0.01
+  }, {
+    "lambda" : 6.0,
+    "eps" : 0.005,
+    "faultExactPct" : 77.7,
+    "falseIncidentsPerRun" : 0.01
+  }, {
+    "lambda" : 6.0,
+    "eps" : 0.01,
+    "faultExactPct" : 76.9,
+    "falseIncidentsPerRun" : 0.01
+  } ]
+}

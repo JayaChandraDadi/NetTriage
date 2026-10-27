@@ -1,0 +1,5 @@
+target
+**/target
+dashboard/node_modules
+.live
+.live-wanpulse
