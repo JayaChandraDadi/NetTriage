@@ -1,14 +1,14 @@
 {
- "deployment": "b774ae2e-edb2-4605-b721-b14a7da80634",
+ "deployment": "65f1e77e-e05c-4a2e-9df6-03a39d011672",
  "changesSeenByNetTriage": [
   {
-   "element": "change/b774ae2e-edb2-4605-b721-b14a7da80634/biz-internet",
-   "deploymentId": "b774ae2e-edb2-4605-b721-b14a7da80634",
+   "element": "change/65f1e77e-e05c-4a2e-9df6-03a39d011672/biz-internet",
+   "deploymentId": "65f1e77e-e05c-4a2e-9df6-03a39d011672",
    "label": "branch v2",
    "color": "biz-internet",
    "routers": 10,
-   "firstApplied": 1793058817854,
-   "lastApplied": 1793058819097,
+   "firstApplied": 1793064574145,
+   "lastApplied": 1793064575380,
    "diff": [
     "~ transports[color=biz-internet].mtu: 1500 -> 1400"
    ],
@@ -20,10 +20,10 @@
   {
    "id": "INC-0001",
    "state": "OPEN",
-   "rootCause": "change/b774ae2e-edb2-4605-b721-b14a7da80634/biz-internet",
+   "rootCause": "change/65f1e77e-e05c-4a2e-9df6-03a39d011672/biz-internet",
    "rootCauseKind": "CHANGE",
-   "description": "config rollout b774ae2e on biz-internet",
-   "headline": "Config rollout b774ae2e on biz-internet degraded 18 of 18 tunnels at 10 sites",
+   "description": "config rollout 65f1e77e on biz-internet",
+   "headline": "Config rollout 65f1e77e on biz-internet degraded 18 of 18 tunnels at 10 sites",
    "confidence": "HIGH",
    "margin": 41.9,
    "degradedNow": 18,
@@ -43,9 +43,9 @@
     133,
     137
    ],
-   "onsetAt": 1793058830000,
-   "openedAt": 1793058840000,
-   "lastSeenAt": 1793058930000,
+   "onsetAt": 1793064590000,
+   "openedAt": 1793064600000,
+   "lastSeenAt": 1793064690000,
    "resolvedAt": null,
    "signature": {
     "kind": "loss",
@@ -59,26 +59,26 @@
    "evidence": [
     {
      "id": "E1",
-     "text": "10 routers applied branch v2 between 23:53:37 UTC and 23:53:39 UTC; 18 of their 18 biz-internet tunnels are degraded.",
+     "text": "10 routers applied branch v2 between 01:29:34 UTC and 01:29:35 UTC; 18 of their 18 biz-internet tunnels are degraded.",
      "data": {
+      "observed": 18,
       "degraded": 18,
-      "routers": 10,
-      "observed": 18
+      "routers": 10
      }
     },
     {
      "id": "E2",
      "text": "Routers that have not applied it are fine: 0 of 60 of their biz-internet tunnels degraded.",
      "data": {
-      "unchangedDegraded": 0,
-      "unchangedObserved": 60
+      "unchangedObserved": 60,
+      "unchangedDegraded": 0
      }
     },
     {
      "id": "E3",
-     "text": "Each affected router degraded after it applied the change (median 11 s later), never before.",
+     "text": "Each affected router degraded after it applied the change (median 14 s later), never before.",
      "data": {
-      "medianLagMs": 11051,
+      "medianLagMs": 14700,
       "degradedBeforeApply": 0
      }
     },
@@ -105,7 +105,7 @@
     },
     {
      "id": "E6",
-     "text": "Typical affected tunnel: loss 5.0% (normally 0.5%), latency -0 ms, jitter +0 ms against its own baseline.",
+     "text": "Typical affected tunnel: loss 5.0% (normally 0.5%), latency +0 ms, jitter +0 ms against its own baseline.",
      "data": {
       "lossPct": 5.0,
       "latencyRiseMs": 0,
@@ -115,10 +115,10 @@
     },
     {
      "id": "E7",
-     "text": "It began at 23:53:50 UTC and reached all 10 sites within 90 s.",
+     "text": "The first affected tunnel was flagged at 01:29:50 UTC and the last of the 10 sites 90 s later.",
      "data": {
-      "spreadMs": 90000,
-      "onset": 1793058830000
+      "onset": 1793064590000,
+      "spreadMs": 90000
      }
     }
    ],
@@ -138,7 +138,7 @@
      "covered": 39,
      "degraded": 9,
      "overlap": 9,
-     "margin": 76.8,
+     "margin": 77.8,
      "reason": "Explains only 9 of the 18 degraded tunnels and predicts trouble on 30 tunnels that are fine (9 of 39 degraded)."
     },
     {
@@ -147,7 +147,7 @@
      "covered": 39,
      "degraded": 9,
      "overlap": 9,
-     "margin": 76.8,
+     "margin": 77.8,
      "reason": "Explains only 9 of the 18 degraded tunnels and predicts trouble on 30 tunnels that are fine (9 of 39 degraded)."
     },
     {
@@ -156,7 +156,7 @@
      "covered": 79,
      "degraded": 9,
      "overlap": 9,
-     "margin": 78.6,
+     "margin": 79.5,
      "reason": "Explains only 9 of the 18 degraded tunnels and predicts trouble on 70 tunnels that are fine (9 of 79 degraded)."
     }
    ],
@@ -164,9 +164,9 @@
     {
      "id": "A1",
      "kind": "ROLLBACK_DEPLOYMENT",
-     "title": "Roll back rollout b774ae2e",
+     "title": "Roll back rollout 65f1e77e",
      "detail": "Restore the previous config on every router that applied it, through EdgeFleet. Needs a person to approve.",
-     "deploymentId": "b774ae2e-edb2-4605-b721-b14a7da80634"
+     "deploymentId": "65f1e77e-e05c-4a2e-9df6-03a39d011672"
     },
     {
      "id": "A2",
@@ -178,49 +178,49 @@
    ],
    "history": [
     {
-     "at": 1793058840000,
-     "rootCause": "change/b774ae2e-edb2-4605-b721-b14a7da80634/biz-internet"
+     "at": 1793064600000,
+     "rootCause": "change/65f1e77e-e05c-4a2e-9df6-03a39d011672/biz-internet"
     }
    ],
    "timeline": [
     {
-     "at": 1793058840000,
+     "at": 1793064600000,
      "degraded": 18
     },
     {
-     "at": 1793058850000,
+     "at": 1793064610000,
      "degraded": 20
     },
     {
-     "at": 1793058860000,
+     "at": 1793064620000,
      "degraded": 20
     },
     {
-     "at": 1793058870000,
+     "at": 1793064630000,
      "degraded": 19
     },
     {
-     "at": 1793058880000,
+     "at": 1793064640000,
      "degraded": 17
     },
     {
-     "at": 1793058890000,
+     "at": 1793064650000,
      "degraded": 17
     },
     {
-     "at": 1793058900000,
+     "at": 1793064660000,
      "degraded": 16
     },
     {
-     "at": 1793058910000,
+     "at": 1793064670000,
      "degraded": 16
     },
     {
-     "at": 1793058920000,
+     "at": 1793064680000,
      "degraded": 17
     },
     {
-     "at": 1793058930000,
+     "at": 1793064690000,
      "degraded": 18
     }
    ]
@@ -232,19 +232,19 @@
    "incidentId": "INC-0001",
    "actionId": "A1",
    "kind": "ROLLBACK_DEPLOYMENT",
-   "title": "Roll back rollout b774ae2e",
-   "deploymentId": "b774ae2e-edb2-4605-b721-b14a7da80634",
+   "title": "Roll back rollout 65f1e77e",
+   "deploymentId": "65f1e77e-e05c-4a2e-9df6-03a39d011672",
    "state": "EXECUTED",
    "requestedBy": "jaya",
    "justification": "approved directly by jaya",
-   "requestedAt": 1793058825867,
+   "requestedAt": 1793064581672,
    "decidedBy": "jaya",
-   "decidedAt": 1793058825868,
+   "decidedAt": 1793064581672,
    "outcome": "EdgeFleet accepted the rollback; deployment is now ROLLING_BACK."
   }
  ],
  "edgefleetDeployment": {
-  "id": "b774ae2e-edb2-4605-b721-b14a7da80634",
+  "id": "65f1e77e-e05c-4a2e-9df6-03a39d011672",
   "template": "branch",
   "templateVersion": 2,
   "group": "pilot",
@@ -256,9 +256,9 @@
   "healthTimeoutSec": 30,
   "state": "ROLLED_BACK",
   "currentBatch": 1,
-  "batchStartedAt": "2026-10-26T23:53:45.880259Z",
+  "batchStartedAt": "2026-10-27T01:29:41.677717Z",
   "reason": "rollback requested by operator",
-  "createdAt": "2026-10-26T23:53:37.547170Z",
-  "finishedAt": "2026-10-26T23:53:46.510796Z"
+  "createdAt": "2026-10-27T01:29:33.984353Z",
+  "finishedAt": "2026-10-27T01:29:42.698047Z"
  }
 }

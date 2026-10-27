@@ -1,0 +1,65 @@
+{
+ "faults": [
+  {
+   "fault": "isp-brownout-us-west",
+   "expected": "provider/biz-internet/us-west",
+   "diagnosed": true,
+   "timeToDiagnoseS": 26.0,
+   "resolvedAfterEndS": 56.7,
+   "confidence": "HIGH",
+   "affectedTunnels": 400
+  },
+  {
+   "fault": "site-102-lte-blackout",
+   "expected": "site/102/lte",
+   "diagnosed": true,
+   "timeToDiagnoseS": 36.3,
+   "resolvedAfterEndS": 55.9,
+   "confidence": "LOW",
+   "affectedTunnels": 2
+  },
+  {
+   "fault": "lte-jitter-us-east",
+   "expected": "provider/lte/us-east",
+   "diagnosed": true,
+   "timeToDiagnoseS": 25.9,
+   "resolvedAfterEndS": 56.5,
+   "confidence": "HIGH",
+   "affectedTunnels": 134
+  },
+  {
+   "fault": "hub-east-degradation",
+   "expected": "hub/10.0.0.2",
+   "diagnosed": true,
+   "timeToDiagnoseS": 26.5,
+   "resolvedAfterEndS": 56.0,
+   "confidence": "HIGH",
+   "affectedTunnels": 1000
+  },
+  {
+   "fault": "site-117-down",
+   "expected": "site/117",
+   "diagnosed": true,
+   "timeToDiagnoseS": 26.0,
+   "resolvedAfterEndS": 56.4,
+   "confidence": "HIGH",
+   "affectedTunnels": 4
+  },
+  {
+   "fault": "mpls-brownout-eu-west",
+   "expected": "provider/mpls/eu-west",
+   "diagnosed": true,
+   "timeToDiagnoseS": 26.4,
+   "resolvedAfterEndS": 55.9,
+   "confidence": "HIGH",
+   "affectedTunnels": 134
+  }
+ ],
+ "faultsDiagnosed": 6,
+ "faultCount": 6,
+ "timeToDiagnoseMedianS": 26.2,
+ "incidentsOpened": 6,
+ "falseIncidents": [],
+ "wanpulseSlaAlertsOpened": 4655,
+ "alertsPerIncident": 775.8
+}

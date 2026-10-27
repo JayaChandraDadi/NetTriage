@@ -168,9 +168,9 @@ What else the runs show:
    from its own apply time. NetTriage opened one incident with the rollout as the root
    cause, at HIGH confidence and a margin of 41.9 nats:
    - E1: 10 routers applied branch v2 within 2 s; 18 of their 18 biz-internet tunnels
-     are degraded.
+     are degraded (the other 2 were still settling in that window).
    - E2: routers that have not applied it are fine (0 of 60).
-   - E3: each affected router degraded after it applied the change (median 11 s), never
+   - E3: each affected router degraded after it applied the change (median 14 s), never
      before.
    - E4: the sites are spread over three regions, so no shared provider, site or hub
      explains them.
@@ -185,36 +185,37 @@ probes over gRPC, Kafka Streams windows them, and NetTriage consumes `tunnel.hea
 Six scripted faults are scored against the simulator's ground-truth log, in wall-clock
 time.
 
-**First run** ([raw results](docs/live-wanpulse-run1.json)):
+**Result on the final build** ([raw results](docs/live-wanpulse.json)):
 
-| Fault | Expected root cause | Named | Time to diagnose |
+| Fault | Root cause named | Time to diagnose | Confidence |
 |---|---|---|---|
-| Internet brownout in us-west | `provider/biz-internet/us-west` | yes | 24.6 s |
-| LTE outage at site 102, during that brownout | `site/102/lte` | **no** (blamed `site/102`) | – |
-| LTE jitter storm in us-east | `provider/lte/us-east` | yes | 25.9 s |
-| Hub 10.0.0.2 degraded | `hub/10.0.0.2` | yes | 25.5 s |
-| Site 117 down | `site/117` | yes, but as a relabel of the hub incident | 25.2 s |
-| MPLS brownout in eu-west | `provider/mpls/eu-west` | yes | 25.8 s |
+| Internet brownout in us-west | `provider/biz-internet/us-west` | 26.0 s | HIGH |
+| LTE outage at site 102, during that brownout | `site/102/lte` | 36.3 s | LOW |
+| LTE jitter storm in us-east | `provider/lte/us-east` | 25.9 s | HIGH |
+| Hub 10.0.0.2 degraded | `hub/10.0.0.2` | 26.5 s | HIGH |
+| Site 117 down, 30 s after the hub fault ends | `site/117` | 26.0 s | HIGH |
+| MPLS brownout in eu-west | `provider/mpls/eu-west` | 26.4 s | HIGH |
 
-The 25 s diagnosis time includes WanPulse's 10 s windows, its 5 s grace period and
-Kafka. Over the run, WanPulse raised 4,624 per-tunnel SLA alerts; NetTriage opened 5
-incidents.
+Six faults, six correct incidents, no false ones. The time to diagnose is wall-clock,
+from the fault's real start, and includes WanPulse's 10 s windows, its 5 s grace period
+and Kafka. Each incident resolved about 56 s after its fault ended. Over the run
+WanPulse raised 4,655 per-tunnel SLA alerts.
 
-**What the run exposed, now fixed:**
+**The first run got two of these wrong** ([raw results](docs/live-wanpulse-run1.json)):
 
-1. **The site-102 LTE outage.** All four of site 102's tunnels were red: the LTE pair from
-   the outage, the internet pair from the brownout. On degraded-or-healthy alone, "site
-   102 is down" was as good an explanation as "its LTE circuit is down". Once the site
-   incident was open, the cheaper cost for open causes also stopped it from ever
+1. **It blamed the whole of site 102.** All four of the site's tunnels were red: the LTE
+   pair from the outage, the internet pair from the brownout. On degraded-or-healthy
+   alone, "site 102 is down" explained that as well as "its LTE circuit is down". Once the
+   site incident was open, the cheaper cost for open causes also stopped it from ever
    sharpening. Fixed by making symptoms evidence: blackout against slowdown. Also, one
    re-wording of an open cause can now take over its discount.
-2. **The site-117 outage.** It started while the hub incident was fading, and two of its
-   tunnels end at that hub. The incident matcher compared overlap against the smaller set
-   of degraded tunnels, so it relabelled the hub incident instead of opening a new one.
-   Fixed by requiring most of both sets to overlap.
+2. **It folded site 117 into the hub incident.** The outage started while the hub
+   incident was fading, and two of its tunnels end at that hub. The incident matcher
+   measured overlap against the smaller set of degraded tunnels, so it relabelled the hub
+   incident instead of opening a new one. Fixed by requiring most of both sets to overlap.
 
 Both cases are now regression tests, and the benchmark has an overlapping-outage
-scenario. A re-run of the live test on the fixed build is in progress.
+scenario.
 
 ## The AI interface
 
